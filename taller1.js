@@ -6,22 +6,21 @@ function convertidorTemp(c){
 //punto 2
 // mas o menos es booleano, true es + 
 function cuadratica(a,b,c,masomenos){
-    const discriminante = b*b-4*a*c
+    let discriminante = b*b-4*a*c
 
     if(discriminante < 0){
         return null
     }else {
-      const raiz= Math.sqrt(discriminante)
+      let raiz= Math.sqrt(discriminante)
         if(masomenos){
-            return (b+raiz)/(2*a)
+            return (-b+raiz)/(2*a)
         }else{
-            return (b-raiz)/(2*a)
+            return (-b-raiz)/(2*a)
         }
     }
     
 }
 
-//punto3
 function mejorParidad(num){
     if(num%2===0){
         return true 
@@ -30,8 +29,6 @@ function mejorParidad(num){
     }
 }
 
-
-//punto4
 function peorParidad(num){
     if (num==1){
         return false
@@ -55,4 +52,4 @@ function peorParidad(num){
         return true
     }
 }
-console.log(cuadratica(1,5,4,true))
+console.log(cuadratica(1,5,4,false))
