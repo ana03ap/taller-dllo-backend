@@ -5,21 +5,17 @@ function convertidorTemp(c){
 
 //punto 2
 // mas o menos es booleano, true es + 
-function cuadratica(a,b,c,masomenos){
-    let discriminante = b*b-4*a*c
-
-    if(discriminante < 0){
+function resolvedor(a, b, c, positivo) {
+    let discriminante = b * b - 4 * a * c;
+    if (discriminante < 0) {
         return null
-    }else {
-      let raiz= Math.sqrt(discriminante)
-        if(masomenos){
-            return (-b+raiz)/(2*a)
-        }else{
-            return (-b-raiz)/(2*a)
-        }
     }
-    
+    let raiz = Math.sqrt(discriminante)
+    return positivo ? (-b + raiz) / (2 * a) : (-b - raiz) / (2 * a)// operador ternario
 }
+
+
+//punto 3
 
 function mejorParidad(num){
     if(num%2===0){
@@ -28,6 +24,8 @@ function mejorParidad(num){
         return false
     }
 }
+
+//punto 4
 
 function peorParidad(num){
     if (num==1){
@@ -52,4 +50,6 @@ function peorParidad(num){
         return true
     }
 }
+
+//pa probar
 console.log(cuadratica(1,5,4,false))
