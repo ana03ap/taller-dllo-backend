@@ -52,4 +52,5 @@ function peorParidad(num){
 }
 
 //pa probar
-console.log(cuadratica(1,5,4,false))
+console.log(resolvedor(1,5,4,false)) 
+
