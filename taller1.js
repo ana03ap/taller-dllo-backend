@@ -5,7 +5,7 @@ function convertidorTemp(c){
 
 //punto 2
 // mas o menos es booleano, true es + 
-function resolvedor(a, b, c, positivo) {
+function resolvedorProbando(a, b, c, positivo) {
     let discriminante = b * b - 4 * a * c;
     if (discriminante < 0) {
         return null
